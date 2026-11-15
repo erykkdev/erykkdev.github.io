@@ -1,97 +1,140 @@
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Profile</title>
+<title>Eryk Krol | Personal Profile</title>
 
 <style>
     /* ===== Global Styles ===== */
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         margin: 0;
         font-family: "Segoe UI", Arial, sans-serif;
-        background: linear-gradient(135deg, #f5f7fa, #e4ecf5);
-        color: #333;
-        line-height: 1.6;
+        background: linear-gradient(135deg, #121923, #1b2635);
+        color: #d6deea;
+        line-height: 1.7;
     }
 
     .container {
         max-width: 900px;
-        margin: 40px auto;
+        margin: 50px auto;
         padding: 20px;
     }
 
-    h1 {
+    /* ===== Header ===== */
+    header {
         text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-        color: #1f2d3d;
+        margin-bottom: 45px;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        margin-bottom: 8px;
+        color: #e8eef7;
+        letter-spacing: 1px;
     }
 
     .subtitle {
-        text-align: center;
-        color: #666;
-        margin-bottom: 40px;
+        color: #91a4bd;
+        font-size: 1.1rem;
     }
 
     /* ===== Section Cards ===== */
     section {
-        background: white;
-        padding: 25px 30px;
+        background: #202c3b;
+        padding: 28px 32px;
         margin-bottom: 25px;
-        border-radius: 12px;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        border-radius: 14px;
+        border: 1px solid #304155;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     section:hover {
         transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
 
     h2 {
-        color: #2c3e50;
-        border-left: 5px solid #4a90e2;
-        padding-left: 10px;
-        margin-bottom: 15px;
+        color: #8bbcff;
+        border-left: 4px solid #609bea;
+        padding-left: 12px;
+        margin-top: 0;
+        margin-bottom: 22px;
     }
 
     h3 {
-        color: #34495e;
-        margin-top: 15px;
+        color: #c1d5ef;
+        margin-top: 20px;
+        margin-bottom: 5px;
     }
 
     p {
-        color: #555;
+        color: #bdc9d8;
+        margin-top: 5px;
     }
 
     /* ===== Lists ===== */
     ul {
-        padding-left: 20px;
+        padding-left: 22px;
     }
 
     li {
-        margin-bottom: 6px;
+        margin-bottom: 8px;
+        color: #bdc9d8;
     }
 
-    /* ===== Contact Links Style ===== */
+    li::marker {
+        color: #6da8f5;
+    }
+
+    /* ===== Contact Links ===== */
     .contact a {
-        color: #4a90e2;
+        color: #82b5ff;
         text-decoration: none;
+        transition: color 0.2s ease;
     }
 
     .contact a:hover {
+        color: #b5d4ff;
         text-decoration: underline;
+    }
+
+    /* ===== Project Highlight ===== */
+    .project-highlight {
+        background: #192433;
+        padding: 18px;
+        border-radius: 10px;
+        border-left: 3px solid #609bea;
+        margin-top: 10px;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+        text-align: center;
+        color: #75869c;
+        font-size: 0.9rem;
+        padding: 20px 0;
     }
 
     /* ===== Responsive Design ===== */
     @media (max-width: 600px) {
         .container {
+            margin: 20px auto;
             padding: 15px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 2.1rem;
+        }
+
+        section {
+            padding: 22px 20px;
         }
     }
 </style>
@@ -101,10 +144,14 @@
 
 <div class="container">
 
-    <h1>Eryk Krol</h1>
-    <p class="subtitle">Aspiring Data Analyst | Rookie Developer | Creative Thinker</p>
+    <header>
+        <h1>Eryk Krol</h1>
+        <p class="subtitle">
+            Aspiring Data Analyst | Rookie Developer | Creative Thinker
+        </p>
+    </header>
 
-    <!-- Section 1 -->
+    <!-- Section 1: Personal Information -->
     <section>
         <h2>Personal Information</h2>
 
@@ -113,48 +160,78 @@
 
         <h3>Contact Details</h3>
         <div class="contact">
-            <p>Email: <a href="mailto:krol.eryk@yahoo.com">krol.eryk@yahoo.com</a></p>
+            <p>Email:
+                <a href="mailto:krol.eryk@yahoo.com">
+                    krol.eryk@yahoo.com
+                </a>
+            </p>
+
             <p>Phone: 0123456789</p>
-            <p>Social Media:</p>
+
+            <h3>Social Media</h3>
             <ul>
                 <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">Twitter</a></li>
                 <li><a href="#">GitHub</a></li>
             </ul>
         </div>
     </section>
 
-    <!-- Section 2 -->
+    <!-- Section 2: Bio -->
     <section>
-        <h2>Bio</h2>
+        <h2>About Me</h2>
 
-        <h3>About Me</h3>
-        <p> Creative data analyst with a passion for filmmaking.</p>
+        <h3>Introduction</h3>
+        <p>
+            Creative data analyst with a passion for filmmaking
+            and an interest in using data to solve problems.
+        </p>
 
         <h3>Experience</h3>
-        <p> Completed a Generation Pre-apprenticeship data analytics course.</p>
+        <p>
+            Completed a Generation Pre-apprenticeship
+            Data Analytics course.
+        </p>
 
         <h3>Skills & Preferred Tools</h3>
         <ul>
-            <li>Python / Excel / SQL</li>
-            <li>Data Cleaning & Analysis</li>
-            <li>HTML / CSS</li>
+            <li>Python, Excel and SQL</li>
+            <li>Data Cleaning and Analysis</li>
+            <li>HTML and CSS</li>
         </ul>
     </section>
 
-    <!-- Section 3 -->
+    <!-- Section 3: Projects -->
     <section>
         <h2>Projects</h2>
 
-        <h3>Featured Project</h3>
-        <p> I participated in a filmmaking project with Screen Education Edinburgh,worked on the script, participated in filming and editing of a short movie called "The Barrier". .</p>
+        <h3>Featured Project: The Barrier</h3>
+
+        <div class="project-highlight">
+            <p>
+                Participated in a filmmaking project with
+                Screen Education Edinburgh. Contributed to
+                scriptwriting, filming and editing of a short
+                movie titled "The Barrier".
+            </p>
+        </div>
 
         <h3>Challenges</h3>
-        <p> Many. </p>
+        <p>
+            Faced various challenges throughout the project,
+            gaining valuable experience in collaboration,
+            creativity and problem-solving.
+        </p>
 
-        <h3>Process</h3>
-        <p> Question - Collect - Clean - Analyse - Visualise - Present </p>
+        <h3>Data Analysis Process</h3>
+        <p>
+            Question → Collect → Clean → Analyse →
+            Visualise → Present
+        </p>
     </section>
+
+    <footer>
+        &copy; 2026 Eryk Krol. All rights reserved.
+    </footer>
 
 </div>
 
