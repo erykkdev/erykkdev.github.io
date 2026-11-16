@@ -1,142 +1,178 @@
-HTML
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eryk Krol | Personal Profile</title>
+<title>Eryk Krol | Personal Portfolio</title>
 
 <style>
-    /* ===== Global Styles ===== */
-    * {
-        box-sizing: border-box;
-    }
+* {
+    box-sizing: border-box;
+}
 
-    body {
-        margin: 0;
-        font-family: "Segoe UI", Arial, sans-serif;
-        background: linear-gradient(135deg, #121923, #1b2635);
-        color: #d6deea;
-        line-height: 1.7;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #121923, #1b2635);
+    color: #d6deea;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 950px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 45px;
+    padding: 35px 20px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 8px;
+    color: #e8eef7;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    color: #91a4bd;
+    font-size: 1.1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+nav a, .contact a {
+    color: #82b5ff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav a:hover, .contact a:hover {
+    color: #b5d4ff;
+    text-decoration: underline;
+}
+
+section {
+    background: #202c3b;
+    padding: 28px 32px;
+    margin-bottom: 25px;
+    border-radius: 14px;
+    border: 1px solid #304155;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+}
+
+h2 {
+    color: #8bbcff;
+    border-left: 4px solid #609bea;
+    padding-left: 12px;
+    margin-top: 0;
+    margin-bottom: 22px;
+}
+
+h3 {
+    color: #c1d5ef;
+    margin-top: 22px;
+    margin-bottom: 5px;
+}
+
+p, li {
+    color: #bdc9d8;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+li::marker {
+    color: #6da8f5;
+}
+
+.job {
+    padding: 15px 18px;
+    margin: 15px 0;
+    background: #192433;
+    border-left: 3px solid #609bea;
+    border-radius: 8px;
+}
+
+.job h3 {
+    margin-top: 0;
+}
+
+.date {
+    color: #91a4bd;
+    font-size: 0.9rem;
+}
+
+.project-highlight {
+    background: #192433;
+    padding: 18px;
+    border-radius: 10px;
+    border-left: 3px solid #609bea;
+    margin-top: 10px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.skill {
+    background: #192433;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #304155;
+}
+
+footer {
+    text-align: center;
+    color: #75869c;
+    font-size: 0.9rem;
+    padding: 20px 0;
+}
+
+@media (max-width: 600px) {
     .container {
-        max-width: 900px;
-        margin: 50px auto;
-        padding: 20px;
-    }
-
-    /* ===== Header ===== */
-    header {
-        text-align: center;
-        margin-bottom: 45px;
+        margin: 20px auto;
+        padding: 15px;
     }
 
     h1 {
-        font-size: 2.8rem;
-        margin-bottom: 8px;
-        color: #e8eef7;
-        letter-spacing: 1px;
+        font-size: 2.1rem;
     }
 
-    .subtitle {
-        color: #91a4bd;
-        font-size: 1.1rem;
-    }
-
-    /* ===== Section Cards ===== */
     section {
-        background: #202c3b;
-        padding: 28px 32px;
-        margin-bottom: 25px;
-        border-radius: 14px;
-        border: 1px solid #304155;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        padding: 22px 20px;
     }
 
-    section:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    nav {
+        gap: 12px;
     }
-
-    h2 {
-        color: #8bbcff;
-        border-left: 4px solid #609bea;
-        padding-left: 12px;
-        margin-top: 0;
-        margin-bottom: 22px;
-    }
-
-    h3 {
-        color: #c1d5ef;
-        margin-top: 20px;
-        margin-bottom: 5px;
-    }
-
-    p {
-        color: #bdc9d8;
-        margin-top: 5px;
-    }
-
-    /* ===== Lists ===== */
-    ul {
-        padding-left: 22px;
-    }
-
-    li {
-        margin-bottom: 8px;
-        color: #bdc9d8;
-    }
-
-    li::marker {
-        color: #6da8f5;
-    }
-
-    /* ===== Contact Links ===== */
-    .contact a {
-        color: #82b5ff;
-        text-decoration: none;
-        transition: color 0.2s ease;
-    }
-
-    .contact a:hover {
-        color: #b5d4ff;
-        text-decoration: underline;
-    }
-
-    /* ===== Project Highlight ===== */
-    .project-highlight {
-        background: #192433;
-        padding: 18px;
-        border-radius: 10px;
-        border-left: 3px solid #609bea;
-        margin-top: 10px;
-    }
-
-    /* ===== Footer ===== */
-    footer {
-        text-align: center;
-        color: #75869c;
-        font-size: 0.9rem;
-        padding: 20px 0;
-    }
-
-    /* ===== Responsive Design ===== */
-    @media (max-width: 600px) {
-        .container {
-            margin: 20px auto;
-            padding: 15px;
-        }
-
-        h1 {
-            font-size: 2.1rem;
-        }
-
-        section {
-            padding: 22px 20px;
-        }
-    }
+}
 </style>
 </head>
 
@@ -144,96 +180,348 @@ HTML
 
 <div class="container">
 
-    <header>
-        <h1>Eryk Krol</h1>
-        <p class="subtitle">
-            Aspiring Data Analyst | Rookie Developer | Creative Thinker
-        </p>
-    </header>
+<header>
+    <h1>Eryk Krol</h1>
+    <p class="subtitle">
+        Aspiring Data Analyst | Junior Developer | Creative Thinker
+    </p>
 
-    <!-- Section 1: Personal Information -->
-    <section>
-        <h2>Personal Information</h2>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-        <h3>Name</h3>
-        <p>Eryk Krol</p>
+<!-- PERSONAL STATEMENT -->
+<section id="about">
+    <h2>Personal Statement</h2>
+    <p>
+        I am an analytical and creative individual with a
+        problem-solving mindset and a positive outlook.
+        I am eager to learn, develop new skills and apply
+        my existing knowledge to new challenges.
+        I enjoy working collaboratively, taking initiative
+        and finding practical solutions to problems.
+    </p>
+</section>
 
-        <h3>Contact Details</h3>
-        <div class="contact">
-            <p>Email:
-                <a href="mailto:krol.eryk@yahoo.com">
-                    krol.eryk@yahoo.com
-                </a>
-            </p>
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Personal Information & Contact</h2>
 
-            <p>Phone: 0123456789</p>
+    <p><strong>Name:</strong> Eryk Krol</p>
+    <p><strong>Location:</strong> Edinburgh, Scotland</p>
+    <p><strong>Email:</strong>
+        <a href="mailto:krol.eryk@yahoo.com">
+            krol.eryk@yahoo.com
+        </a>
+    </p>
+    <p><strong>Mobile:</strong>
+        <a href="tel:07586633416">07586633416</a>
+    </p>
+    <p><strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/" target="_blank">
+            Eryk Krol | LinkedIn
+        </a>
+    </p>
+    <p><strong>GitHub / Portfolio:</strong>
+        <a href="https://erykkdev.github.io/#" target="_blank">
+            erykkdev.github.io
+        </a>
+    </p>
+</section>
 
-            <h3>Social Media</h3>
-            <ul>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">GitHub</a></li>
-            </ul>
-        </div>
-    </section>
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Key Skills</h2>
 
-    <!-- Section 2: Bio -->
-    <section>
-        <h2>About Me</h2>
+    <div class="skills">
 
-        <h3>Introduction</h3>
-        <p>
-            Creative data analyst with a passion for filmmaking
-            and an interest in using data to solve problems.
-        </p>
-
-        <h3>Experience</h3>
-        <p>
-            Completed a Generation Pre-apprenticeship
-            Data Analytics course.
-        </p>
-
-        <h3>Skills & Preferred Tools</h3>
-        <ul>
-            <li>Python, Excel and SQL</li>
-            <li>Data Cleaning and Analysis</li>
-            <li>HTML and CSS</li>
-        </ul>
-    </section>
-
-    <!-- Section 3: Projects -->
-    <section>
-        <h2>Projects</h2>
-
-        <h3>Featured Project: The Barrier</h3>
-
-        <div class="project-highlight">
+        <div class="skill">
+            <h3>Problem-solving</h3>
             <p>
-                Participated in a filmmaking project with
-                Screen Education Edinburgh. Contributed to
-                scriptwriting, filming and editing of a short
-                movie titled "The Barrier".
+                Identify solutions efficiently when problems
+                arise and determine appropriate next steps.
             </p>
         </div>
 
-        <h3>Challenges</h3>
+        <div class="skill">
+            <h3>Leadership</h3>
+            <p>
+                Take initiative, provide guidance and encourage
+                team members to achieve shared goals.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Power BI & Data Analysis</h3>
+            <p>
+                Analyse, visualise and present data using
+                dashboards, charts and reports.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Teamwork</h3>
+            <p>
+                Enjoy meeting new people, exchanging ideas
+                and contributing to a positive workplace.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Creativity</h3>
+            <p>
+                Explore creative ideas through literature,
+                poetry and filmmaking.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Languages</h3>
+            <p>
+                Fluent in English and Polish.
+            </p>
+        </div>
+
+    </div>
+
+    <h3>Technical Skills</h3>
+    <ul>
+        <li>Python fundamentals</li>
+        <li>Microsoft Excel and Power BI</li>
+        <li>Data cleaning and analysis</li>
+        <li>SQL fundamentals</li>
+        <li>HTML and CSS</li>
+        <li>Microsoft Word and Office applications</li>
+        <li>Dashboards, charts and pivot tables</li>
+    </ul>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <h2>Experience</h2>
+
+    <div class="job">
+        <h3>Department for Work and Pensions (DWP)</h3>
+        <p><strong>Work Experience</strong></p>
+        <p class="date">Edinburgh | October 2026</p>
+
+        <ul>
+            <li>
+                Developed an understanding of the DWP and
+                the range of support services available to
+                help people move into work, increase earnings
+                and access benefits.
+            </li>
+            <li>
+                Demonstrated commitment and reliability
+                through consistent attendance and engagement.
+            </li>
+            <li>
+                Developed communication skills by working
+                with a range of people.
+            </li>
+            <li>
+                Gained awareness of confidentiality,
+                professionalism, equality, diversity and
+                inclusion in public services.
+            </li>
+            <li>
+                Completed employability training focused
+                on workplace skills and expectations.
+            </li>
+            <li>
+                Improved interview techniques, CV writing
+                and digital job-searching skills.
+            </li>
+            <li>
+                Researched, created and presented a
+                presentation to senior leaders.
+            </li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <h3>Generation</h3>
+        <p><strong>Data Analyst Pre-Apprenticeship</strong></p>
+        <p class="date">Remote | April – July 2026</p>
+
+        <ul>
+            <li>
+                Learned the fundamentals of Python programming.
+            </li>
+            <li>
+                Developed teamwork skills through
+                collaborative exercises and group projects.
+            </li>
+            <li>
+                Regularly used Microsoft Word, Excel and Power BI.
+            </li>
+            <li>
+                Developed a professional work ethic and
+                adopted positive workplace mindsets.
+            </li>
+            <li>
+                Analysed data using Excel statistical formulas
+                and produced evidence-based reports.
+            </li>
+            <li>
+                Filtered, sorted and formatted datasets.
+            </li>
+            <li>
+                Created dashboards, charts and pivot tables
+                to communicate insights to non-technical
+                audiences.
+            </li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <h3>Royal College of Nursing</h3>
+        <p><strong>Administrative Assistant – Work Placement</strong></p>
+        <p class="date">Edinburgh | June 2021</p>
+
+        <ul>
+            <li>
+                Supported front desk and administrative
+                operations, developing communication,
+                organisation and customer service skills.
+            </li>
+            <li>
+                Responded to customer enquiries by telephone
+                and in person, signposting people to relevant
+                support organisations.
+            </li>
+            <li>
+                Researched and created a creative presentation
+                about the history of nursing in Britain.
+            </li>
+            <li>
+                Completed office tasks including document
+                handling, photocopying and file organisation.
+            </li>
+            <li>
+                Developed time management, attention to
+                detail and experience in a professional
+                office environment.
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <h2>Education & Certifications</h2>
+
+    <h3>Edinburgh College</h3>
+    <p class="date">2023</p>
+    <ul>
+        <li>Studied Sociology at National 5 level.</li>
+        <li>Completed part of the course covering politics.</li>
+    </ul>
+
+    <h3>Portobello High School</h3>
+    <p class="date">Edinburgh | 2016 – 2022</p>
+    <ul>
+        <li>Higher Spanish</li>
+        <li>Higher English</li>
+        <li>National 5 Design & Manufacture</li>
+        <li>National 5 Biology</li>
+    </ul>
+
+    <h3>Additional Training</h3>
+    <ul>
+        <li>Generation Data Analyst Pre-Apprenticeship – 2026</li>
+        <li>Department for Work and Pensions Work Experience – 2026</li>
+    </ul>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <h3>Featured Project: The Barrier</h3>
+
+    <div class="project-highlight">
         <p>
-            Faced various challenges throughout the project,
-            gaining valuable experience in collaboration,
-            creativity and problem-solving.
+            Participated in a filmmaking programme with
+            Screen Education Edinburgh, contributing to
+            the development of a short film titled
+            <strong>"The Barrier".</strong>
         </p>
 
-        <h3>Data Analysis Process</h3>
         <p>
-            Question → Collect → Clean → Analyse →
-            Visualise → Present
+            Contributed to scriptwriting, filming and editing,
+            gaining practical experience in creative
+            collaboration and storytelling.
         </p>
-    </section>
+    </div>
 
-    <footer>
-        &copy; 2026 Eryk Krol. All rights reserved.
-    </footer>
+    <h3>Data Analysis Process</h3>
+    <p>
+        Question → Collect → Clean → Analyse →
+        Visualise → Present
+    </p>
+
+    <p>
+        My approach to data analysis involves understanding
+        a problem, collecting relevant information, preparing
+        datasets and communicating findings through
+        visualisations and reports.
+    </p>
+</section>
+
+<!-- INTERESTS -->
+<section id="interests">
+    <h2>Interests & Personal Development</h2>
+
+    <h3>Filmmaking and Cinema</h3>
+    <p>
+        I have a strong interest in cinema and filmmaking.
+        Some of my favourite films include Alfred Hitchcock's
+        <em>Rear Window</em> (1954) and Akira Kurosawa's
+        <em>Seven Samurai</em> (1954).
+        My interest in filmmaking led me to participate
+        in the Through the Lens programme, where I helped
+        create the short film "The Barrier".
+    </p>
+
+    <h3>Strategy Games – Total War</h3>
+    <p>
+        I enjoy the Total War strategy game series, which
+        involves managing cities, provinces and armies.
+        The games encourage strategic thinking, risk
+        assessment, resource allocation and prioritisation.
+    </p>
+
+    <p>
+        Managing an economy requires analysing available
+        resources, deciding where to invest and planning
+        ahead to maximise the potential of each province.
+        These experiences have strengthened my interest
+        in analytical thinking, decision-making and
+        problem-solving.
+    </p>
+
+    <h3>Other Interests</h3>
+    <ul>
+        <li>Films and cinema history</li>
+        <li>Creative writing, books and poetry</li>
+        <li>Video games and strategic planning</li>
+        <li>Learning new technologies and developing skills</li>
+    </ul>
+</section>
+
+<footer>
+    &copy; 2026 Eryk Krol. All rights reserved.
+</footer>
 
 </div>
-
 </body>
 </html>
